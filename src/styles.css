@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-image: url('explore.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; 
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+  border-radius: 8px;
+  margin: 20px; /* Adds space around the header */
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em; /* Larger heading for emphasis */
+  color: #616161; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Text shadow for depth */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  margin-top: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+#viewCountriesBtn, #itinerariesBtn {
+  background-color: #1461e7;
+  color: white;
+}
+
+#viewCountriesBtn:hover, #itinerariesBtn:hover {
+  background-color: #d20e0b;
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.search {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 250px; 
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+#searchBtn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 10px;
+}
+
+#searchBtn:hover {
+  background-color: #1d7a31;
+}
+
+#content {
+  display: grid;
+  grid-template-columns:  repeat(5, 1fr);
+  gap: 15px;
+  justify-items: center;
+  margin-top: 15px;
+}
+
+.country {
+  background-color: rgba(255, 255, 255, 0.9); 
+  border: 2px solid #272728; 
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  width: 260px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.country:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.country h2 {
+  font-size: 1.7em; 
+  color: #3a3c3d; 
+}
+
+.country img.flag {
+  width: 100px; /* Larger flag size */
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.country p {
+  margin: 5px 0;
+  font-size: 1em; 
+  color: #555; 
+}
+
+.itinerary-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.itinerary {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffc107; 
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: 270px;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+.itinerary h3 {
+  font-size: 1.5em; 
+  color: #ffc107; 
+}
+
+.itinerary textarea {
+  width: 95%; 
+  height: 80px; 
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+/* Itinerary button styles */
+.itinerary button {
+  margin: 5px 5px;
+  background-color: #ffc107; 
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.itinerary button:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%; 
+  }
+  
+  #searchInput {
+    width: 180px; 
+  }
+
+  #viewCountriesBtn, #itinerariesBtn,
+  #searchBtn {
+    padding: 8px 12px; 
+    font-size: 0.9em; 
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
